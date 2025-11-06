@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذخیره‌سازی فایل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>•┈┈••✾•🌿🌺🌿•✾••┈┈•</h1>
+            <h2>ذخیره‌سازی فایل</h2>
+            <p>فایل‌های خود را آپلود کنید و لینک مستقیم دریافت کنید</p>
+        </header>
+
+        <div class="upload-section">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <input type="file" id="fileInput" name="file" multiple>
+                    <label for="fileInput" class="file-label">
+                        <span class="file-icon">📁</span>
+                        <span class="file-text">انتخاب فایل‌ها</span>
+                    </label>
+                </div>
+                <button type="submit" class="upload-btn">📤 آپلود فایل‌ها</button>
+            </form>
+        </div>
+
+        <div class="progress-section" id="progressSection" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p id="progressText">در حال آپلود...</p>
+        </div>
+
+        <div class="files-section" id="filesSection">
+            <h3>فایل‌های شما</h3>
+            <div id="filesList" class="files-list">
+                <!-- فایل‌ها اینجا نمایش داده می‌شوند -->
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="totalFiles">0</span>
+                <span class="stat-label">تعداد فایل‌ها</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalSize">0</span>
+                <span class="stat-label">حجم کل (MB)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal برای نمایش لینک -->
+    <div id="linkModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>لینک‌های دانلود</h3>
+            <div id="linksContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
